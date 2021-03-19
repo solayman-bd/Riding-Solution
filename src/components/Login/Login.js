@@ -141,11 +141,12 @@ const Login = () => {
         .then((res) => {
           const newUserInfo = { ...user };
           newUserInfo.error = "";
+          newUserInfo.name = res.user.displayName;
           newUserInfo.success = true;
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
           history.replace(from);
-          console.log("sign In user info", res.user);
+          console.log("sign In user info", res.user.displayName);
         })
 
         .catch((error) => {

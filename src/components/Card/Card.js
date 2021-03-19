@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 
 const Card = (props) => {
   const { name, img, farePerHour } = props.data;
+
   return (
     <div className="col-md-3 col-sm-12">
       <div class="card">
@@ -17,8 +19,8 @@ const Card = (props) => {
         <div class="card-body">
           <h5 class="card-title">{name}</h5>
           <p class="card-text">Fare Per Hour : {farePerHour} $</p>
-          <Link to="/destination" class="btn btn-primary">
-            Use this Vehicle
+          <Link to="/destination">
+            <button class="btn btn-primary">Use this vehicle</button>
           </Link>
         </div>
       </div>

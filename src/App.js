@@ -9,6 +9,7 @@ import Login from "./components/Login/Login";
 import NoMatch from "./components/NoMatch/NoMatch";
 import { createContext, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import ConfirmDestination from "./components/ConfirmDestination/ConfirmDestination";
 export const UserContext = createContext();
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/confirm">
+            <ConfirmDestination></ConfirmDestination>
           </Route>
           <Route path="/login">
             <Login></Login>

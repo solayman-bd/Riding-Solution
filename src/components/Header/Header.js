@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 
-const Header = () => {
+const Header = (props) => {
+  const fromDestination = props.fromDestination;
+
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  console.log(loggedInUser.name);
   return (
     <nav className="navbar navbar-expand-lg  rounded">
-      <a className="navbar-brand mr-auto">Riding Solution</a>
+      <a className="navbar-brand mr-auto" href="">
+        Riding Solution
+      </a>
       <button
         className="navbar-toggler"
         type="button"
@@ -41,9 +48,15 @@ const Header = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/login" className="nav-link mr-">
-            Login
-          </Link>
+          {fromDestination ? (
+            <Link to="/" className="nav-link mr-2">
+              {loggedInUser.name}
+            </Link>
+          ) : (
+            <Link to="/login" className="nav-link mr-2">
+              Login
+            </Link>
+          )}
         </li>
       </ul>
     </nav>
