@@ -195,6 +195,7 @@ const Login = () => {
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Password</label>
           <input
+            title="Password must contain uppercase, lowercase, number , special character and length 6-16!"
             required
             name="password"
             type="password"
@@ -207,6 +208,7 @@ const Login = () => {
         <div className="form-group">
           <label htmlFor="exampleInputPassword2">Confirm Password</label>
           <input
+            title="Password must contain uppercase, lowercase, number , special character and length 6-16"
             required
             name="confirmPassword"
             type="password"
