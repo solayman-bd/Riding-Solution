@@ -4,7 +4,7 @@ import bikeUrl from "./motobike.png";
 import trainUrl from "./train.png";
 const fakeData = [
   {
-    name: "Moto Bike",
+    name: "Motor Bike",
     img: bikeUrl,
     farePerHour: 10,
   },

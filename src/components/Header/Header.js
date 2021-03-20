@@ -3,63 +3,49 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
+import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 
 const Header = (props) => {
   const fromDestination = props.fromDestination;
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  console.log(loggedInUser.name);
-  return (
-    <nav className="navbar navbar-expand-lg  rounded">
-      <a className="navbar-brand mr-auto" href="">
-        Riding Solution
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <ul className="navbar-nav ml-sm-2">
-        <li className="nav-item">
-          <Link to="/home" className="nav-link">
+  return (
+    <Navbar bg="light" expand="lg">
+      <Link to="/">
+        <Navbar.Brand>Riding Solution</Navbar.Brand>
+      </Link>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Link as={Link} to={"/"}>
             Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/destination" className="nav-link">
+          </Nav.Link>
+
+          <Nav.Link as={Link} to={"/home"}>
             Destination
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/blog" className="nav-link">
+          </Nav.Link>
+
+          <Nav.Link as={Link} to={"/blog"}>
             Blog
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/contact" className="nav-link">
+          </Nav.Link>
+
+          <Nav.Link as={Link} to={"/contact"}>
             Contact
-          </Link>
-        </li>
-        <li className="nav-item">
+          </Nav.Link>
+
           {fromDestination ? (
-            <Link to="/" className="nav-link mr-2">
+            <Nav.Link as={Link} to={"/"} className="mr-2">
               {loggedInUser.name}
-            </Link>
+            </Nav.Link>
           ) : (
-            <Link to="/login" className="nav-link mr-2">
+            <Nav.Link as={Link} to={"/home"} className="nav-link mr-2">
               Login
-            </Link>
+            </Nav.Link>
           )}
-        </li>
-      </ul>
-    </nav>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

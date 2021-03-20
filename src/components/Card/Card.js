@@ -8,7 +8,7 @@ const Card = (props) => {
   const { name, img, farePerHour } = props.data;
 
   return (
-    <div className="col-md-3 col-sm-12">
+    <div className="col-md-3 my-2 col-sm-12">
       <div class="card">
         <img
           class="card-img-top"
@@ -19,7 +19,7 @@ const Card = (props) => {
         <div class="card-body">
           <h5 class="card-title">{name}</h5>
           <p class="card-text">Fare Per Hour : {farePerHour} $</p>
-          <Link to="/destination">
+          <Link to={`/destination/${name}`}>
             <button class="btn btn-primary">Use this vehicle</button>
           </Link>
         </div>

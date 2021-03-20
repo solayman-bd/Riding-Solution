@@ -146,7 +146,7 @@ const Login = () => {
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
           history.replace(from);
-          console.log("sign In user info", res.user.displayName);
+          //   console.log("sign In user info", res.user.displayName);
         })
 
         .catch((error) => {

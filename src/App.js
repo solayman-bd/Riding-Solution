@@ -9,7 +9,7 @@ import Login from "./components/Login/Login";
 import NoMatch from "./components/NoMatch/NoMatch";
 import { createContext, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import ConfirmDestination from "./components/ConfirmDestination/ConfirmDestination";
+
 export const UserContext = createContext();
 
 function App() {
@@ -18,21 +18,22 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <PrivateRoute path="/destination">
+          <PrivateRoute path="/destination/:vehicleName">
             <Destination></Destination>
           </PrivateRoute>
           <Route path="/blog">
             <Blog></Blog>
           </Route>
+          {/* <PrivateRoute path="/destination">
+            <Destination></Destination>
+          </PrivateRoute> */}
+          <PrivateRoute path="/home">
+            <Home></Home>
+          </PrivateRoute>
           <Route path="/contact">
             <Contact></Contact>
           </Route>
-          <Route path="/confirm">
-            <ConfirmDestination></ConfirmDestination>
-          </Route>
+
           <Route path="/login">
             <Login></Login>
           </Route>
