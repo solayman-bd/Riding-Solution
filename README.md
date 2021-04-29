@@ -4,5 +4,5 @@ live Server: https://riding-solution.netlify.app/
 
 Noticeable Features:
 
-1. This is a simle website focused in google authentication where in login system email password and google sign in method is used.
+1. This is a website focused in google authentication using firebase where in login system email password and google sign in method is used.
 2. Google map demo is added
