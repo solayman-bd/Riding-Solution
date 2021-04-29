@@ -4,5 +4,9 @@ live Server: https://riding-solution.netlify.app/
 
 Noticeable Features:
 
-1. This is a website focused in google authentication using firebase where in login system "email password" and "google sign in" method is used.
-2. Google map demo is added
+1. This is a riding solution based website where the customer can choose his/her riding option.
+2. In the homepage some travell options are shown that are designed by bootsrap where the data are loaded from fake data that are generated.
+3. React Router , private route are used
+4. This is a website focused in firebased authentication where in login system "email password" and "google sign in" methods are used.
+5. Google map is added by generating api key
+6. Responsive (Desktop and mobile version) 
