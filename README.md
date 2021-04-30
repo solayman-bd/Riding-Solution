@@ -10,4 +10,4 @@ Noticeable Features:
 4. This is a website focused in firebased authentication where in login system "email password" and "google sign in" methods are used.
 5. Google map is added by generating api key
 6. Responsive (Desktop and mobile version) 
-7. Used Technologies : React Js, React Router, Java Script, Bootstrap etc.
+7. Used Technologies : React Js, React Router, Java Script, Bootstrap, firebase etc.
